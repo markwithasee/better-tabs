@@ -1,0 +1,87 @@
+.tabs_container {
+	border: 1px solid #666;
+	padding: 10px;
+	margin: 10px
+}
+
+.tabs_container ul.toc {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs_container ul.toc li {
+    float: left;
+    margin: 7px 4px 2px 0 !important;
+	list-style-type: none !important;
+	border:none;
+}
+
+.tabs_container ul.toc li a {
+	display: block;
+	background-color: #293A70;
+	color: #fff;
+	text-decoration: none;
+	white-space: nowrap;
+	text-align: center;
+	padding: 3px;
+	border: 2px solid #ccc;
+	position: relative;
+	transition: 0.2s all;
+	border-radius: 5px;
+}
+
+.tabs_container ul.toc li a:selected, .tabs_container ul.toc li a:visited { outline: none; }
+
+.tabs_container ul.toc li.current a {
+    background-color: #B23428;
+    color: #fff;
+	padding:2px;
+}
+
+.tabs_container ul.toc li a span {
+    display: block;
+	font-weight: bold;
+	line-height: 1em;
+	white-space: nowrap;
+	padding-right: 0px;
+}
+
+.tabs_container div.content {
+ 	padding: 5px 7px 0px 7px;
+	clear: left;
+}
+
+/* arrows (no IE < 8) */
+.tabs_container ul.toc li.current a, .tabs_container ul.toc li a:hover {
+	background-color: #fff;
+	color: #293A70;
+	border: 2px solid #293A70;
+	padding: 3px;
+}
+
+.tabs_container ul.toc li.current a:after, .tabs_container ul.toc a:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tabs_container ul.toc li.current a:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #fff;
+	border-width: 10px;
+	left: 50%;
+	margin-left: -10px;
+}
+
+.tabs_container ul.toc li.current a:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #293A70;
+	border-width: 13px;
+	left: 50%;
+	margin-left: -13px;
+}

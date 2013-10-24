@@ -1,0 +1,193 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>jQuery Tabs Plugin with CSS Arrows</title>
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="tabs.css">
+	
+	<style type="text/css" media="screen">
+		* {font-family: Arial, Helvetica, sans-serif;}
+	</style>
+
+</head>
+<body>
+
+<div id="container">
+
+	<div id="main" role="main">
+
+		<div class="tabs_container" style="width: 649px;">
+
+			<ul class="toc">
+				<li><a href="#tab1"><span>Tab 1</span> Subtitle Here</a></li>
+				<li><a href="#tab2"><span>Tab 2</span> A Subtitle</a></li>
+				<li><a href="#tab3"><span>Tab 3</span> No Subtitle?</a></li>
+				<li><a href="#tab4"><span>Tab 4</span> Subtitle!</a></li>
+				<li><a href="#tab5"><span>Tab 5</span> Subtitle This.</a></li>
+			</ul>
+
+			<div class="content" id="_tab1">
+				
+				
+				<img src="http://placehold.it/300x250/c00&text=Tab+1+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 1, The First Tab</h2>
+				
+				<div class="tabs_container" style="width: 250px;">
+					<ul class="toc">
+						<li><a href="#tab1a"><span>Nested</span> Tab 1a</a></li>
+						<li><a href="#tab1b"><span>Nested</span> Tab 1b</a></li>
+						<li><a href="#tab1c"><span>Nested</span> Tab 1c</a></li>
+					</ul>
+					<div class="content" id="_tab1a">
+						<h3>Tab 1a</h3>
+						<p>Clicking these tabs doesn't update the URL.</p>
+					</div>
+					<div class="content" id="_tab1b">
+						<h3>Tab 1b</h3>
+						<p>So you can't link directly to them.</p>
+					</div>
+					<div class="content" id="_tab1c">
+						<h3>Tab 1c</h3>
+						<p>But why would you want to?</p>
+					</div>
+				</div>
+				<p>This is the first tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+
+			</div>
+		
+			<div class="content" id="_tab2">
+
+				<img src="http://placehold.it/300x130/00c&text=Tab+1+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 2, The Second Tab</h2>
+				<p>This is the second tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+				
+			</div>
+
+			<div class="content" id="_tab3">
+
+				<img src="http://placehold.it/300x130/250&text=Tab+3+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 3, The Third Tab</h2>
+				<p>This is the third tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+
+			</div>
+
+			<div class="content" id="_tab4">
+
+				<img src="http://placehold.it/300x130/100&text=Tab+4+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 4, The Fourth Tab</h2>
+				<p>This is the fourth tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+
+			</div>
+
+			<div class="content" id="_tab5">
+
+				<img src="http://placehold.it/300x130/ccc&text=Tab+5+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 5, The Fifth Tab</h2>
+				<p>This is the fifth tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+			
+			</div>
+
+		</div>
+		
+		<div class="tabs_container" style="width: 649px;">
+
+			<ul class="toc">
+				<li><a href="#tab6"><span>Tab 6</span> Subtitle Here</a></li>
+				<li><a href="#tab7"><span>Tab 7</span> A Subtitle</a></li>
+				<li><a href="#tab8"><span>Tab 8</span> No Subtitle?</a></li>
+				<li><a href="#tab9"><span>Tab 9</span> Subtitle!</a></li>
+				<li><a href="#tab10"><span>Tab 10</span> Subtitle This.</a></li>
+			</ul>
+
+			<div class="content" id="_tab6">
+				
+				<img src="http://placehold.it/300x130/00c&text=Tab+6+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 6, The Sixth Tab</h2>
+				<p>This is the sixth tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+
+			</div>
+		
+			<div class="content" id="_tab7">
+				
+				<img src="http://placehold.it/300x250/c00&text=Tab+7+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 7, The Seventh Tab</h2>
+				
+				<div class="tabs_container" style="width: 250px;">
+					<ul class="toc">
+						<li><a href="#tab7a"><span>Nested</span> Tab 7a</a></li>
+						<li><a href="#tab7b"><span>Nested</span> Tab 7b</a></li>
+						<li><a href="#tab7c"><span>Nested</span> Tab 7c</a></li>
+					</ul>
+					<div class="content" id="_tab7a">
+						<h3>Tab 7a</h3>
+						<p>More content can go here!</p>
+					</div>
+					<div class="content" id="_tab7b">
+						<h3>Tab 7b</h3>
+						<p>Did I mention more content?</p>
+					</div>
+					<div class="content" id="_tab7c">
+						<h3>Tab 7c</h3>
+						<p>I did mention more content.</p>
+					</div>
+				</div>
+				
+				<p>This is the seventh tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+
+			</div>
+
+			<div class="content" id="_tab8">
+
+				<img src="http://placehold.it/300x130/250&text=Tab+8+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 8, The Eighth Tab</h2>
+				<p>This is the eighth  tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+
+			</div>
+
+			<div class="content" id="_tab9">
+
+				<img src="http://placehold.it/300x130/100&text=Tab+9+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 9, The Ninth Tab</h2>
+				<p>This is the ninth tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+
+			</div>
+
+			<div class="content" id="_tab10">
+
+				<img src="http://placehold.it/300x130/ccc&text=Tab+10+Image" border="0" style="float: right; margin: 20px 0 0 10px;"/>
+				<h2>Tab 10, The Last Tab</h2>
+				<p>This is the last tab</p>
+				<p>Fill it with content ... I mean all kinds of content. You can put as much content in it as you want!</p>
+			
+			</div>
+
+		</div>
+
+	</div>
+</div> <!--! end of #container -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- scripts concatenated and minified via ant build script-->
+<script src="tabs.js"></script>
+<!-- end scripts-->
+
+</body>
+</html>
