@@ -1,4 +1,15 @@
-// Requires jQuery
+/*
+* Better Tabs - A tiny jquery plugin which uses object literal organization and progressive enhancement.
+*
+* Copyright (c) 2013 Marc Brooks
+*
+* Licensed under the MIT license:
+*   http://www.opensource.org/licenses/mit-license.php
+*
+* Project home:
+*  https://github.com/markwithasee/better-tabs
+*
+*/
 
 Tabs = {
   // Changes to the tab with the specified ID.
