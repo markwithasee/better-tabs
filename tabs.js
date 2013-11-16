@@ -57,7 +57,7 @@ Tabs = {
 		    });
 		}
 
-	    // If there's a URL hash and it's in the array, activate it
+	    // If there's a URL hash and it's in the array, activate and scroll to it
 	    if ( (window.location.hash) && ($.inArray(hash,tabList) != -1) ) {
 			var contentId = hash,
 				offset = $(this).offset().top;
