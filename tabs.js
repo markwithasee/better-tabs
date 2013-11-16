@@ -85,13 +85,14 @@ Tabs = {
 	});
 	
 	// Attach onclick event to links on page which point to tabs
-	$('a[href^=#]').not('.toc li a').on('click',function(){
+	$('a[href^=#]').not('.toc li a').on('click',function(e){
 		var href = $(this).attr('href'),
 			tab = $('.toc li a[href='+href+']');
 		if (tab != null ) {	
 			tab.click();
 			var offset = tab.parents('.tabs_container').offset().top;
 			$('body').scrollTop(offset);
+			return false;
 		}
 	});
 
