@@ -11,6 +11,9 @@
 *
 */
 
+// Hide all but first tabs initially 
+$(document).ready(function () { $('.tabs_container').children('.content:not(:first-child)').hide(); });
+
 Tabs = {
   // Changes to the tab with the specified ID.
   GoTo: function (containerId, contentId, skipReplace) {
@@ -31,13 +34,13 @@ Tabs = {
 
   Init: function () {
 	
-	var i = 1;
+	var	i = 1;
 	
 	$('.tabs_container').each(function(){
 		
 	    var containerId,
+			tabList = [],
 			contentId,
-	      	tabList = [],
 	      	hash = window.location.hash.substring(1); 
 	      	// Hash starts with second character
 	      	// The underscore in "_hash" content ID parameter prevents scroll on load
@@ -47,27 +50,27 @@ Tabs = {
 		$(this).addClass(containerId);
 		i++;
 
-	    // Array of tabs  
-	    $(this).find('.toc li a').each(function(){
-			tabList.push($(this).attr('href').substring(1));
-	    });
-
-		// Hide all tabs initially 
-	    $(this).find('.content').hide();
+	    // Array of top-level tabs 
+		if ( $(this).parents('.tabs_container').length == 0 ) {
+		    $(this).children('.toc').find('li a').each(function(){
+				tabList.push($(this).attr('href').substring(1));
+		    });
+		}
 
 	    // If there's a URL hash and it's in the array, activate it
 	    if ( (window.location.hash) && ($.inArray(hash,tabList) != -1) ) {
-			var contentId = hash;
+			var contentId = hash,
+				offset = $(this).offset().top;
+			$('body').scrollTop(offset);
 	    }
 	    // If the URL hash is not in the array, activate the first tab
 	    else {
-			var contentId = $(this).find('.toc li a:first').attr('href').substring(1);
+			var contentId = $(this).children('.toc').find('li a:first').attr('href').substring(1);
 	    }
+	    Tabs.GoTo(containerId, contentId, true);
 
-	    if (contentId) Tabs.GoTo(containerId, contentId, true);
-
-	    // Attach an onclick event to all the anchor links in the table of contents.
-	    $(this).find('.toc li a').on('click',function(e){
+	    // Attach onclick event to all the anchor links in the table of contents.
+	    $(this).children('.toc').find('li a').on('click',function(e){
 			e.preventDefault();
 			// If this a nested tab, don't change the address
 			var skipReplace = false;
@@ -79,6 +82,17 @@ Tabs = {
 			return false;
 	    });
 		
+	});
+	
+	// Attach onclick event to links on page which point to tabs
+	$('a[href^=#]').not('.toc li a').on('click',function(){
+		var href = $(this).attr('href'),
+			tab = $('.toc li a[href='+href+']');
+		if (tab != null ) {	
+			tab.click();
+			var offset = tab.parents('.tabs_container').offset().top;
+			$('body').scrollTop(offset);
+		}
 	});
 
   }
